@@ -1,14 +1,14 @@
 <!--
  * @Date: 2020-09-21 09:59:16
  * @LastEditors: zhangbaoyan
- * @LastEditTime: 2020-09-21 11:53:54
+ * @LastEditTime: 2020-09-21 14:37:16
  * @FilePath: /iLife/components/Logo.vue
 -->
 <template>
     <svg
         class="NuxtLogo"
-        width="245"
-        height="180"
+        :width="width"
+        :height="height"
         viewBox="0 0 452 342"
         xmlns="http://www.w3.org/2000/svg"
     >
@@ -26,6 +26,21 @@
         />
     </svg>
 </template>
+
+<script>
+export default {
+    props: {
+        width: {
+            type: Number,
+            default: 100,
+        },
+        height: {
+            type: Number,
+            default: 80,
+        },
+    },
+}
+</script>
 
 <style>
 .NuxtLogo {

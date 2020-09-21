@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-09-21 09:59:16
  * @LastEditors: zhangbaoyan
- * @LastEditTime: 2020-09-21 11:55:26
+ * @LastEditTime: 2020-09-21 15:39:18
  * @FilePath: /iLife/.eslintrc.js
  */
 module.exports = {
@@ -22,5 +22,7 @@ module.exports = {
     ],
     plugins: ['prettier'],
     // add your custom rules here
-    rules: {},
+    rules: {
+        camelcase: ['error', { allow: ['aa_bb'] }],
+    },
 }
