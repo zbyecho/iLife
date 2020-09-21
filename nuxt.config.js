@@ -1,3 +1,9 @@
+/*
+ * @Date: 2020-09-21 09:59:16
+ * @LastEditors: zhangbaoyan
+ * @LastEditTime: 2020-09-21 11:17:46
+ * @FilePath: /iLife/nuxt.config.js
+ */
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -26,8 +32,14 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: [
+    '@nuxtjs/style-resources',
+  ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  styleResources: {
+    less: './assets/**/*.less'
+  }
 }

@@ -11,7 +11,10 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "core-js": "^3.6.5",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
     "nuxt": "^2.14.5"
   },
   "devDependencies": {
