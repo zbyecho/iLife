@@ -1,8 +1,8 @@
 <!--
  * @Date: 2020-09-21 13:58:26
  * @LastEditors: zhangbaoyan
- * @LastEditTime: 2020-09-21 17:22:15
- * @FilePath: /iLife/layouts/blog.vue
+ * @LastEditTime: 2020-09-22 13:42:55
+ * @FilePath: /iLife/layouts/default.vue
 -->
 <template>
     <div class="hclass">
@@ -14,6 +14,7 @@
             </transition>
             <el-main class="main-cnt">
                 <nuxt />
+                <!-- <NuxtChild /> -->
             </el-main>
         </el-container>
         <Zbacktop />
@@ -26,6 +27,36 @@ export default {
         isShow() {
             return this.$store.state.isShow
         },
+        headeTitle() {
+            return this.$store.state.title
+        },
+    },
+    head() {
+        console.log('headeTitle', this.isShow)
+        return {
+            title: `iLife-${this.headeTitle}`,
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'about',
+                    content: '个人中心',
+                },
+            ],
+        }
+    },
+    asyncData({
+        isDev,
+        route,
+        store,
+        env,
+        params,
+        query,
+        req,
+        res,
+        redirect,
+        error,
+    }) {
+        console.log(route.name)
     },
 }
 </script>

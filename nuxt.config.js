@@ -1,13 +1,13 @@
 /*
  * @Date: 2020-09-21 09:59:16
  * @LastEditors: zhangbaoyan
- * @LastEditTime: 2020-09-21 14:19:42
+ * @LastEditTime: 2020-09-22 11:49:37
  * @FilePath: /iLife/nuxt.config.js
  */
+import routes from './router/index'
 export default {
     // Global page headers (https://go.nuxtjs.dev/config-head)
     head: {
-        title: 'iLife',
         meta: [
             { charset: 'utf-8' },
             {
@@ -20,7 +20,7 @@ export default {
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
-    css: [],
+    css: ['~assets/css/main.css'],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: ['~/plugins/element-ui'],
@@ -54,5 +54,10 @@ export default {
 
     styleResources: {
         less: './assets/**/*.less',
+    },
+
+    router: {
+        middleware: ['routerTitle'],
+        extendRoutes: routes,
     },
 }

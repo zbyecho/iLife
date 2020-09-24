@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-09-21 16:02:34
  * @LastEditors: zhangbaoyan
- * @LastEditTime: 2020-09-21 16:42:49
+ * @LastEditTime: 2020-09-22 14:57:47
  * @FilePath: /iLife/components/Zbacktop.vue
 -->
 <template>
@@ -51,7 +51,10 @@ export default {
                     document.documentElement.scrollTop ||
                     window.pageYOffset ||
                     document.body.scrollTop
-                if (_this.scrollTop > _this.$props.height) {
+                if (
+                    (_this.scrollTop > _this.$props.height || this.$route, name)
+                ) {
+                    // console.log()
                     // 符合条件
                     _this.$store.commit('increment', true)
                 } else {

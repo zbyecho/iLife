@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-09-21 14:30:34
  * @LastEditors: zhangbaoyan
- * @LastEditTime: 2020-09-21 17:21:53
+ * @LastEditTime: 2020-09-22 09:52:05
  * @FilePath: /iLife/components/Zheader.vue
 -->
 <template>
@@ -12,11 +12,15 @@
             </el-col>
             <el-col :span="16">
                 <el-row :gutter="20">
-                    <el-col :span="4">
-                        <div class="traget_box">首页</div>
+                    <el-col :span="4" class="traget_box">
+                        <div class="traget_box" @click="go('index', {})">
+                            首页
+                        </div>
                     </el-col>
                     <el-col :span="4">
-                        <div class="traget_box">个人中心</div>
+                        <div class="traget_box" @click="go('about', {})">
+                            个人中心
+                        </div>
                     </el-col>
                     <el-col :span="4">
                         <div class="traget_box">个人技能</div>
@@ -43,6 +47,19 @@ export default {
         hclass: {
             type: String,
             default: 'Hbg',
+        },
+    },
+    methods: {
+        /**
+         * @description: 头部导航跳转
+         * @param {type} { name: ”路由名称“, params 参数}
+         * @return {type}
+         */
+        go(routeName, _params) {
+            this.$router.push({
+                name: routeName,
+                params: _params,
+            })
         },
     },
 }

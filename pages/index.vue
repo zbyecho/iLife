@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-09-21 09:59:16
  * @LastEditors: zhangbaoyan
- * @LastEditTime: 2020-09-21 17:02:23
+ * @LastEditTime: 2020-09-22 13:33:08
  * @FilePath: /iLife/pages/index.vue
 -->
 <template>
@@ -15,24 +15,9 @@
 
 <script>
 export default {
-    layout(context) {
-        return 'blog'
-    },
     data() {
         return {
             title: '首页',
-        }
-    },
-    head() {
-        return {
-            title: this.title,
-            meta: [
-                {
-                    hid: 'description',
-                    name: 'description',
-                    content: 'My custom description',
-                },
-            ],
         }
     },
 }
